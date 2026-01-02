@@ -30,8 +30,8 @@ body.light {
 ========================= */
 body.dark {
   background:
-    radial-gradient(circle at top left, rgba(0, 180, 255, 0.18), transparent 40%),
-    radial-gradient(circle at bottom right, rgba(120, 80, 255, 0.18), transparent 40%),
+    radial-gradient(circle at top left, rgba(0,180,255,0.18), transparent 40%),
+    radial-gradient(circle at bottom right, rgba(120,80,255,0.18), transparent 40%),
     linear-gradient(180deg, #0b1117, #020617);
   color: #e6edf3;
 }
@@ -40,7 +40,7 @@ body.dark {
    GLASS EFFECT
 ========================= */
 .glass {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255,255,255,0.08);
   backdrop-filter: blur(14px);
   border-radius: 20px;
   box-shadow: 0 25px 60px rgba(0,0,0,0.35);
@@ -90,11 +90,12 @@ body.dark {
 }
 
 /* =========================
-   SECTIONS
+   SECTIONS (SAFE OFFSET)
 ========================= */
 .section {
   padding: 120px 8%;
   margin-top: 160px;
+  scroll-margin-top: 180px; /* FIX for anchor + navbar */
 }
 
 /* =========================
@@ -263,14 +264,14 @@ body.dark {
 }
 
 /* =========================
-   MOBILE RESPONSIVE (FIXED)
+   MOBILE RESPONSIVE (CLEAN)
 ========================= */
 @media (max-width: 768px) {
 
   .navbar {
     flex-direction: column;
-    gap: 12px;
-    padding: 16px 20px;
+    gap: 10px;
+    padding: 14px 18px;
   }
 
   .navbar nav {
@@ -283,10 +284,10 @@ body.dark {
     font-size: 14px;
   }
 
-  /* IMPORTANT FIX */
   .section {
-    margin-top: 220px;
-    padding: 90px 6%;
+    margin-top: 200px;
+    padding: 80px 6%;
+    scroll-margin-top: 220px;
   }
 
   .hero h2 {

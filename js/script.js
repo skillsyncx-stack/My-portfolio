@@ -1,14 +1,20 @@
 // ===============================
-// THEME TOGGLE (WORKING 100%)
+// THEME TOGGLE (STABLE & CLEAN)
 // ===============================
 
 const themeToggle = document.getElementById("themeToggle");
+const body = document.body;
+
+// Ensure default icon
+if (!body.classList.contains("dark")) {
+  themeToggle.textContent = "🌙";
+}
 
 themeToggle.addEventListener("click", () => {
-  document.body.classList.toggle("dark");
+  body.classList.toggle("dark");
 
-  // Update icon
-  if (document.body.classList.contains("dark")) {
+  // Toggle icon
+  if (body.classList.contains("dark")) {
     themeToggle.textContent = "☀️";
   } else {
     themeToggle.textContent = "🌙";
@@ -16,16 +22,24 @@ themeToggle.addEventListener("click", () => {
 });
 
 // ===============================
-// SCROLL REVEAL
+// SCROLL REVEAL (ON LOAD + SCROLL)
 // ===============================
 
 const reveals = document.querySelectorAll(".reveal");
 
-window.addEventListener("scroll", () => {
+function revealOnScroll() {
   reveals.forEach(section => {
-    const top = section.getBoundingClientRect().top;
-    if (top < window.innerHeight - 100) {
+    const sectionTop = section.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    if (sectionTop < windowHeight - 100) {
       section.classList.add("active");
     }
   });
-});
+}
+
+// Run on page load
+revealOnScroll();
+
+// Run on scroll
+window.addEventListener("scroll", revealOnScroll);
