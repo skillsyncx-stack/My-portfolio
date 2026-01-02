@@ -1,30 +1,45 @@
-// THEME TOGGLE
+// ===============================
+// THEME TOGGLE (STABLE & CLEAN)
+// ===============================
+
 const themeToggle = document.getElementById("themeToggle");
-themeToggle.onclick = () => {
-  document.body.classList.toggle("dark");
-  themeToggle.textContent =
-    document.body.classList.contains("dark") ? "☀️" : "🌙";
-};
+const body = document.body;
 
-// SCROLL REVEAL
-document.querySelectorAll(".reveal").forEach(el => {
-  const show = () => {
-    if (el.getBoundingClientRect().top < window.innerHeight - 100) {
-      el.classList.add("active");
+// Ensure default icon
+if (!body.classList.contains("dark")) {
+  themeToggle.textContent = "🌙";
+}
+
+themeToggle.addEventListener("click", () => {
+  body.classList.toggle("dark");
+
+  // Toggle icon
+  if (body.classList.contains("dark")) {
+    themeToggle.textContent = "☀️";
+  } else {
+    themeToggle.textContent = "🌙";
+  }
+});
+
+// ===============================
+// SCROLL REVEAL (ON LOAD + SCROLL)
+// ===============================
+
+const reveals = document.querySelectorAll(".reveal");
+
+function revealOnScroll() {
+  reveals.forEach(section => {
+    const sectionTop = section.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    if (sectionTop < windowHeight - 100) {
+      section.classList.add("active");
     }
-  };
-  window.addEventListener("scroll", show);
-  show();
-});
+  });
+}
 
-// HAMBURGER MENU
-const hamburger = document.getElementById("hamburger");
-const navMenu = document.getElementById("navMenu");
+// Run on page load
+revealOnScroll();
 
-hamburger.onclick = () => {
-  navMenu.classList.toggle("active");
-};
-
-document.querySelectorAll("#navMenu a").forEach(link => {
-  link.onclick = () => navMenu.classList.remove("active");
-});
+// Run on scroll
+window.addEventListener("scroll", revealOnScroll);
