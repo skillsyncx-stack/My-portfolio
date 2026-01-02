@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
+/* =========================
+   RESET
+========================= */
 * {
   margin: 0;
   padding: 0;
@@ -15,17 +18,16 @@ body {
   background: #f5f7fa;
   color: #111827;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
-/* Explicit light class (kept same) */
 body.light {
   background: #f5f7fa;
   color: #111827;
 }
 
 /* =========================
-   DARK THEME – PREMIUM
-   (IMPROVED COLORS ONLY)
+   DARK THEME (IMPROVED ONLY)
 ========================= */
 body.dark {
   background:
@@ -39,7 +41,7 @@ body.dark {
    GLASS EFFECT
 ========================= */
 .glass {
-  background: rgba(255,255,255,0.08);
+  background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(14px);
   border-radius: 20px;
   box-shadow: 0 25px 60px rgba(0,0,0,0.4);
@@ -61,11 +63,22 @@ body.dark {
   z-index: 1000;
 }
 
+.navbar h1 {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.navbar nav {
+  display: flex;
+  align-items: center;
+}
+
 .navbar nav a {
   margin-left: 20px;
   text-decoration: none;
   color: inherit;
   font-weight: 500;
+  font-size: 15px;
 }
 
 #themeToggle {
@@ -108,6 +121,7 @@ body.dark {
 .desc {
   margin-top: 10px;
   opacity: 0.85;
+  line-height: 1.6;
 }
 
 /* =========================
@@ -149,11 +163,39 @@ body.dark {
 }
 
 /* =========================
+   TIMELINE
+========================= */
+.timeline {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.timeline-item {
+  display: flex;
+  gap: 20px;
+}
+
+.timeline .dot {
+  width: 14px;
+  height: 14px;
+  background: #00c6ff;
+  border-radius: 50%;
+  margin-top: 6px;
+}
+
+.timeline .content h3 {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+/* =========================
    SKILLS
 ========================= */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 30px;
 }
 
@@ -173,7 +215,7 @@ body.dark {
 ========================= */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
 }
 
@@ -222,4 +264,56 @@ body.dark {
   height: 100%;
   z-index: -1;
   pointer-events: none;
+}
+
+/* =========================
+   MOBILE RESPONSIVE FIXES
+========================= */
+@media (max-width: 768px) {
+
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+    padding: 14px 18px;
+  }
+
+  .navbar nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .navbar nav a {
+    margin: 6px 10px;
+    font-size: 14px;
+  }
+
+  .section {
+    padding: 80px 6%;
+    margin-top: 80px;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .profile-img {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto;
+  }
+
+  .skills-grid,
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-item {
+    flex-direction: column;
+  }
+
 }
