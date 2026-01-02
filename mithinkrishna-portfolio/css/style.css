@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+   DEFAULT LIGHT THEME
+   (UNCHANGED)
+========================= */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f5f7fa;
+  color: #111827;
+  min-height: 100vh;
+}
+
+/* Explicit light class (kept same) */
+body.light {
+  background: #f5f7fa;
+  color: #111827;
+}
+
+/* =========================
+   DARK THEME – PREMIUM
+   (IMPROVED COLORS ONLY)
+========================= */
+body.dark {
+  background:
+    radial-gradient(circle at top left, rgba(0, 180, 255, 0.18), transparent 40%),
+    radial-gradient(circle at bottom right, rgba(120, 80, 255, 0.18), transparent 40%),
+    linear-gradient(180deg, #0b1117, #020617);
+  color: #e6edf3;
+}
+
+/* =========================
+   GLASS EFFECT
+========================= */
+.glass {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(14px);
+  border-radius: 20px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.4);
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.navbar {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  padding: 18px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.navbar nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+}
+
+#themeToggle {
+  margin-left: 20px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: inherit;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+.section {
+  padding: 120px 8%;
+  margin-top: 140px;
+}
+
+/* =========================
+   HERO
+========================= */
+.hero {
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  background: linear-gradient(90deg,#00c6ff,#0072ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  margin-top: 15px;
+  font-weight: 500;
+}
+
+.desc {
+  margin-top: 10px;
+  opacity: 0.85;
+}
+
+/* =========================
+   BUTTON
+========================= */
+.btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 14px 34px;
+  background: linear-gradient(135deg,#00c6ff,#0072ff);
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0,198,255,0.4);
+}
+
+/* =========================
+   ABOUT
+========================= */
+.about-grid {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.profile-img {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid rgba(255,255,255,0.2);
+}
+
+/* =========================
+   SKILLS
+========================= */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+  gap: 30px;
+}
+
+.skill-card {
+  padding: 25px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.08);
+  transition: 0.3s;
+}
+
+.skill-card:hover {
+  transform: translateY(-8px);
+}
+
+/* =========================
+   PROJECTS
+========================= */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+  gap: 30px;
+}
+
+.project-card {
+  padding: 25px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.08);
+}
+
+.project-card a {
+  display: inline-block;
+  margin-top: 15px;
+  color: #00c6ff;
+  text-decoration: none;
+}
+
+/* =========================
+   CONTACT
+========================= */
+.contact {
+  text-align: center;
+}
+
+/* =========================
+   SCROLL REVEAL
+========================= */
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: 0.8s;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================
+   PARTICLE BACKGROUND
+========================= */
+#particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
