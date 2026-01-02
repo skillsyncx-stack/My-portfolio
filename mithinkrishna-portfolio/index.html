@@ -2,26 +2,23 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-
-  <!-- IMPORTANT FOR MOBILE -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>Mithinkrishna N S | Portfolio</title>
-
   <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body class="light">
 
-  <!-- Particle Background -->
   <canvas id="particles"></canvas>
 
   <!-- ================= NAVBAR ================= -->
   <header class="navbar glass">
-    <h1 class="logo">Mithinkrishna</h1>
+    <h1>Mithinkrishna</h1>
 
-    <!-- NAV LINKS -->
-    <nav id="navMenu" class="nav-links">
+    <!-- Hamburger (Mobile only) -->
+    <div class="hamburger" id="hamburger">☰</div>
+
+    <nav id="navMenu">
       <a href="#home">Home</a>
       <a href="#about">About</a>
       <a href="#timeline">Journey</a>
@@ -30,58 +27,31 @@
       <a href="#contact">Contact</a>
     </nav>
 
-    <!-- RIGHT ACTIONS -->
-    <div class="nav-actions">
-      <button id="themeToggle" aria-label="Toggle Theme">🌙</button>
-
-      <!-- HAMBURGER -->
-      <div id="hamburger" aria-label="Menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
+    <button id="themeToggle">🌙</button>
   </header>
 
   <!-- ================= HERO ================= -->
   <section id="home" class="section hero glass reveal">
     <h2>Mithinkrishna N S</h2>
-
-    <p class="subtitle">
-      Founder & Developer – SkillSyncX | Student Innovator
-    </p>
-
+    <p class="subtitle">Founder & Developer – SkillSyncX | Student Innovator</p>
     <p class="desc">
-      Building AI-powered learning systems that convert
-      syllabus → skills → projects → career clarity.
+      Building AI-powered learning systems that convert syllabus → skills → projects → career clarity.
     </p>
-
     <a href="#projects" class="btn">View My Work</a>
   </section>
 
   <!-- ================= ABOUT ================= -->
-  <section id="about" class="section glass reveal about">
+  <section id="about" class="section glass reveal">
     <div class="about-grid">
-
-      <img
-        src="images/profile.jpg"
-        alt="Mithinkrishna Profile"
-        class="profile-img"
-      />
-
-      <div class="about-content">
+      <img src="images/profile.jpg" class="profile-img" alt="Profile" />
+      <div>
         <h2>About Me</h2>
-
         <p>
           I’m Mithinkrishna N S, a student developer and Founder of SkillSyncX.
-          Over the last 8+ months, I’ve built AI-driven platforms solving real
-          student problems like career confusion, fake certifications, and
-          unvalidated projects.
+          I build AI-driven platforms that solve real student problems.
         </p>
-
         <p>
-          My goal is to build impactful EdTech & AI products that genuinely
-          improve learning outcomes.
+          My goal is to build impactful EdTech & AI products.
         </p>
       </div>
     </div>
@@ -90,50 +60,20 @@
   <!-- ================= TIMELINE ================= -->
   <section id="timeline" class="section glass reveal">
     <h2>SkillSyncX Journey</h2>
-
     <div class="timeline">
-
       <div class="timeline-item">
         <span class="dot"></span>
         <div class="content">
           <h3>Problem Discovery</h3>
-          <p>
-            Identified real issues faced by college students — career confusion,
-            copied projects, fake certificates, and lack of skill validation.
-          </p>
+          <p>Career confusion, fake certificates, copied projects.</p>
         </div>
       </div>
 
       <div class="timeline-item">
         <span class="dot"></span>
         <div class="content">
-          <h3>Idea & Vision</h3>
-          <p>
-            Designed SkillSyncX to guide students from syllabus → skills →
-            projects → certification → career clarity.
-          </p>
-        </div>
-      </div>
-
-      <div class="timeline-item">
-        <span class="dot"></span>
-        <div class="content">
-          <h3>Development Phase</h3>
-          <p>
-            Built AI-powered career roadmaps, validation-based mini projects,
-            certificate generation, and role-based dashboards.
-          </p>
-        </div>
-      </div>
-
-      <div class="timeline-item">
-        <span class="dot"></span>
-        <div class="content">
-          <h3>Launch & Adoption</h3>
-          <p>
-            Deployed SkillSyncX live, presented in colleges, conducted student
-            sessions, and collected real user feedback.
-          </p>
+          <h3>Build & Launch</h3>
+          <p>AI roadmaps, validation projects, real certificates.</p>
         </div>
       </div>
 
@@ -141,93 +81,53 @@
         <span class="dot"></span>
         <div class="content">
           <h3>Recognition</h3>
-          <p>
-            Successfully filed Copyright for SkillSyncX under
-            Government of India (2025).
-          </p>
+          <p>Copyright filed – Government of India (2025).</p>
         </div>
       </div>
-
     </div>
   </section>
 
   <!-- ================= SKILLS ================= -->
   <section id="skills" class="section glass reveal">
     <h2>Skills</h2>
-
     <div class="skills-grid">
-
       <div class="skill-card">
         <h3>💻 Development</h3>
-        <ul>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JavaScript</li>
-          <li>UI Structuring</li>
-        </ul>
+        <ul><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
       </div>
-
       <div class="skill-card">
-        <h3>🤖 AI & Logic</h3>
-        <ul>
-          <li>Career Roadmap Logic</li>
-          <li>Validation-based Learning</li>
-          <li>Prompt Engineering</li>
-        </ul>
+        <h3>🤖 AI</h3>
+        <ul><li>Prompt Engineering</li><li>Roadmap Logic</li></ul>
       </div>
-
       <div class="skill-card">
         <h3>🧰 Tools</h3>
-        <ul>
-          <li>VS Code</li>
-          <li>Git & GitHub</li>
-          <li>Lovable AI</li>
-          <li>Vercel</li>
-        </ul>
+        <ul><li>VS Code</li><li>GitHub</li><li>Vercel</li></ul>
       </div>
-
     </div>
   </section>
 
   <!-- ================= PROJECTS ================= -->
   <section id="projects" class="section glass reveal">
     <h2>Projects</h2>
-
     <div class="projects-grid">
-
       <div class="project-card">
         <h3>SkillSyncX</h3>
-        <p>
-          AI-powered career & skill roadmap platform with validation-based
-          projects and AI-verified certificates.
-        </p>
-        <a href="https://skillsyncx.vercel.app" target="_blank">
-          Live Project →
-        </a>
+        <a href="https://skillsyncx.vercel.app" target="_blank">Live →</a>
       </div>
-
       <div class="project-card">
         <h3>Trivio</h3>
-        <p>
-          Interactive quiz-based learning platform designed to improve
-          engagement and concept retention.
-        </p>
-        <a href="https://trivioo.vercel.app" target="_blank">
-          Live Project →
-        </a>
+        <a href="https://trivioo.vercel.app" target="_blank">Live →</a>
       </div>
-
     </div>
   </section>
 
   <!-- ================= CONTACT ================= -->
   <section id="contact" class="section glass reveal contact">
     <h2>Contact</h2>
-    <p>Email: <strong>mithinkrishnanns@gmail.com</strong></p>
-    <p>Location: <strong>Coimbatore, Tamil Nadu, India</strong></p>
+    <p>Email: mithinkrishnanns@gmail.com</p>
+    <p>Location: Coimbatore, India</p>
   </section>
 
-  <!-- ================= SCRIPT ================= -->
   <script src="js/script.js"></script>
 </body>
 </html>
